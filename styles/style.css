@@ -5,23 +5,40 @@ body{
   background: rgb(242, 242, 180);
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
+/* 레이아웃 */
+.header, .visual, .main, .slogan, .footer-inner{
+  width: 940px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
 
 .header{
   background: pink;
+  height: 15vh;
+  padding: 0 30px;
 }
 
+/* 비주얼 */
 .visual{
   background: orange;
+  height: 10vh;
 }
 
+/* 메인 */
 .main{
   background: lightgreen;
+  height: 50vh;
 }
 
 .slogan{
   background: skyblue;
+  height: 10vh;
 }
 
 .footer{
   background: gray;
+}
+.footer-inner{
+  height: 15vh;
+  background: silver;
 }
