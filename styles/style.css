@@ -28,11 +28,58 @@ body{
 .main{
   background: lightgreen;
   height: 50vh;
+  display: flow-root;
+  padding: 0 15px;
+  /* border: 1px solid red; */
+  /* overflow: hidden; */
+  /* BFC */
+  /* IE6 - CSS bug 199 */
+  /* zoom: 1; IE6 에서 사용하는 것 overflow 보다 위에 씀 */
 }
+.group{
+  float: left;
+  margin: 0 15px;
+}
+/* .clearfix{
+  clear: both;
+} */
+/* .main::after{
+  content: "";
+  clear: both;
+  display: block;
+} */
+.group1{
+  background-color: violet;
+  width: 250px;
+  /* float: left; */
+}
+.group2{
+  background-color: salmon;
+  width: 380px;
+  /* float: left; */
+}
+.group3{
+  background-color: gold;
+  width: 190px;
+  /* float: left; */
+}
+* 
+.main::before{
+  content: "첫번째 자식 요소 입니다.";
+  background: blue;
+  color: white;
+}
+.main::after{
+  content: "마지막 자식 요소 입니다.";
+  background: blue;
+  color: white;
+} */
 
+/* 슬로건 */
 .slogan{
   background: skyblue;
   height: 10vh;
+  /* clear: both; */
 }
 
 .footer{
