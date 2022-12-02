@@ -63,7 +63,7 @@ body{
   width: 190px;
   /* float: left; */
 }
-* 
+/* 
 .main::before{
   content: "첫번째 자식 요소 입니다.";
   background: blue;
