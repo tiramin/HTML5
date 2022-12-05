@@ -5,10 +5,15 @@
 *, *::before, *::after{
   box-sizing: border-box;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
 
 /* 본문 스타일 */
 body{
-  background: rgb(242, 242, 180);
+  color: #212121;
+  background: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 200;
 }
@@ -47,6 +52,10 @@ body{
   background-color: skyblue;
 } */
 .member li::before{
+}
+
+.member a{
+  text-transform: uppercase;
 }
 
 
