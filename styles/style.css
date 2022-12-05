@@ -1,5 +1,6 @@
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./fontello.css);
 /* 기본 스타일 */
 *, *::before, *::after{
   box-sizing: border-box;
@@ -16,12 +17,38 @@ body{
   width: 940px;
   margin: 0 auto;
 }
-
+/* 헤더 */
 .header{
-  background: pink;
-  height: 15vh;
+  background: #fff;
   padding: 0 30px;
+  height: 15vh;
+  border-radius: 0 0 15px 15px;
 }
+.member{
+  background-color: pink;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+/* .member->10점, li->1점, ::before->1점 => 12점 */
+/* .member li::before{
+  content: ":";
+} */
+/* .member->10점, .first->10점, ::before->1점 => 21점 */
+/* .member .first::before{
+  content: "첫번째 자식요소를 생성합니다.";
+}
+.member li:nth-child(2)::before{
+  content: "";
+} */
+
+/* .member li:nth-child(n+2)::before{
+  content: "";
+  background-color: skyblue;
+} */
+.member li::before{
+}
+
 
 /* 비주얼 */
 .visual{
