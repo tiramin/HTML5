@@ -1,5 +1,18 @@
 @import url(./normalize.css);
 @import url(./reset.css);
+/* 숨김 콘텐츠 */
+.a11y-hidden{
+  background-color: red;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+/* 기본 스타일 */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
 html{
   font-size: 10px;
 }
@@ -14,20 +27,18 @@ body{
   /* em, rem 단위 사용 */
   font-size: 1.4rem;
   color: 212121;
-  background: #ccc;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #efefef 60%, #fff 100%);
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 /* 레이아웃 */
 .header, .visual, .main, .slogan, .footer-inner{
   width: 940px;
-  box-sizing: border-box;
   margin: 0 auto;
 }
 
 /* 헤더 */
 .header{
   background: #fff;
-  height: 15vh;
   padding: 0 30px;
   border-radius: 0 0 15px 15px;
   position: relative;
@@ -55,6 +66,7 @@ body{
 .member li a{
   padding: 6px 10px;
   display: inherit;
+  text-transform: uppercase;
 }
 
 /* 마지막 li 요소에 포함된 a 요소 선택하여 오른쪽 패딩 0으로 재정의 */
@@ -65,6 +77,45 @@ body{
 
 .divider{
   margin-right: 4px;
+}
+
+/* 메인 메뉴 */
+.navigation{
+  padding-bottom: 80px;
+}
+.menu{
+  border-top: 2px solid currentColor;
+  background: #e85e2c
+  linear-gradient(
+    to bottom,
+    #ef9126 0%,
+    #e85e2c 35%,
+    #e85e2c 70%,
+    #ef9126 100%
+  );
+  border-radius: 0 0 5px 5px;
+  /* display: flow-root;  잃어버린 자식요소 때문에 높이를 잃어버려서 준 속성인데 높이를 주는 순간 필요 없어진다. */
+  padding-left: 230px;
+  height: 47px;  /* border의 2px이 높이에 포함되어야 한다. 높이를 직접 주는 방식으로 플롯의문제를 해결할 수 있다. */
+}
+.menu-item{
+  float: left;
+  border-left: 2px solid #fff; /* border 보다 아래에 위치해야한다.*/
+}
+.menu-button{
+  border: 0;
+  background: transparent;
+  padding: 0 23px;
+  line-height: 45px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+}
+.sub-menu{
+  background-color: pink;
+  position: absolute;
+  display: none;
 }
 
 
@@ -132,8 +183,10 @@ body{
   /* clear: both; */
 }
 
+/* 푸터 */
 .footer{
   background: gray;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 35%, #efefef 60%, #fff 100%);
 }
 .footer-inner{
   height: 15vh;
