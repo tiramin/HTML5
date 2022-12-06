@@ -36,7 +36,7 @@ body{
 
 /* 텍스트 링크 모음 */
 .member{
-  /* background: aqua; */
+  background: aqua;
   text-align: right;
 }
 .member li{
@@ -48,6 +48,13 @@ body{
   padding: 6px 10px;
   display: inherit;
 }
+
+/* 마지막 li 요소에 포함된 a 요소 선택하여 오른쪽 패딩 0으로 재정의 */
+.member li:last-child a{
+  /* padding-right: 0; */
+  /* text-transform: uppercase; */
+}
+
 .divider{
   margin-right: 4px;
 }
