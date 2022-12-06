@@ -36,20 +36,18 @@ body{
 
 /* 텍스트 링크 모음 */
 .member{
-  background: aqua;
   text-align: right;
   padding: 4px 0;
   /* position 속성 활용하여 .member 영역을 오른쪽으로 10px 만큼 이동하기
   position: relative;
   right: -10px; */
+  /* transform 속성을 활용하여 .member 영역 오른쪽으로 10px 이동 */
   transform: translateX(10px);
 }
 .member li{
-  /* background: pink; */
   display: inline-block;
 }
 .member li a{
-  background: coral;
   padding: 6px 10px;
   display: inherit;
 }
