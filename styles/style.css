@@ -139,7 +139,7 @@ body{
   position: absolute;
   /* left: 0; */
   top: 47; /* 부모의 높이는 45px, 박스 아래 구분선의 두께 2px = 47px */
-  /* padding: 4px 0; */
+  padding: 4px 0;
   display: none;
 }
 
@@ -183,7 +183,7 @@ body{
 }
 .sub-menu a{
   display: inline-block;
-  padding: 10px 0;
+  padding: 6px 0;
 }
 /* 마우스를 올렸을 때만 바뀌게 */
 .sub-menu a:hover, .sub-menu a:focus{
