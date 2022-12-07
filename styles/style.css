@@ -1,3 +1,4 @@
+@import url(./fonts.css);
 @import url(./normalize.css);
 @import url(./reset.css);
 /* 숨김 콘텐츠 */
@@ -48,6 +49,7 @@ body{
   position: absolute;
   top: 45px;
   left: 60px;
+  z-index: 10;
 }
 
 /* 텍스트 링크 모음 */
@@ -97,27 +99,88 @@ body{
   /* display: flow-root;  잃어버린 자식요소 때문에 높이를 잃어버려서 준 속성인데 높이를 주는 순간 필요 없어진다. */
   padding-left: 230px;
   height: 47px;  /* border의 2px이 높이에 포함되어야 한다. 높이를 직접 주는 방식으로 플롯의문제를 해결할 수 있다. */
+  position: relative; /* 얘가 생기면서 로고가 사라졌다. */
+}
+/* .menu li{
+  float: left;
+} */
+.menu>li:nth-child(-n+3){
+  position: relative;
 }
 .menu-item{
   float: left;
   border-left: 2px solid #fff; /* border 보다 아래에 위치해야한다.*/
+  position: relative;
 }
+/* 구체성 점수 -> 10점 */
 .menu-button{
   border: 0;
   background: transparent;
   padding: 0 23px;
-  line-height: 45px;
+  line-height: 45px; /* padding으로 하면 글자가 가지는 면적이 줄어들게 된다. 따라서 border를 줬을 때 글자 바로 밑에 나타난다. */
   font-size: 15px;
   font-weight: 700;
   color: #fff;
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
 }
+/* 구체성 점수 -> 20점 */
+/* 흰색이 cascade 되면서 노란색을 바뀔 것 */
+.is-active .menu-button{
+  color: yellow;
+}
+.is-active .menu-button::after{ /* after, before 도 inline box 로 만들어짐 */
+  content: ""; /* anonymous inline box */
+  display: block; /* 블록 속성은 아래로 떨어지기 때문에 이런 성질을 이용해서 상자의 바로 밑에 놓기 */
+  border-bottom: 2px solid #212121;
+}
+
 .sub-menu{
   background-color: pink;
   position: absolute;
+  /* left: 0; */
+  top: 47; /* 부모의 높이는 45px, 박스 아래 구분선의 두께 2px = 47px */
   display: none;
 }
 
+.menu-accessibility, .menu-qna, .menu-archive{
+  right: 0;
+}
+
+
+.is-active .sub-menu{
+  display: block;
+  /* width: 500px; 이렇게 너비를 주는 것은 유지보수 차원에서 좋지않다.*/
+  white-space: nowrap; /* 줄바꿈하지 말라는 것. 줄바꿈을 공백문자의 대상으로 삼지마라. -> 자신의 크기를 바꿀 수 없다면 크기를 늘려라. */
+}
+/* is-active 는 왜 안붙일까?
+일단 다 설정해놓고 none 일때만 보이게 하는 것에만 스타일 지정해준것
+아래의 것들은 필요없다. */
+.sub-menu li{
+  display: inline-block;
+  padding-left: 1em;
+  background: yellow;
+}
+.sub-menu a::before{
+  content: '\e802';
+  font-family: 'fontello';
+  font-weight: normal; 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em; 
+  margin-left: .2em;
+  /* font-smoothing 뭔지 찾아보기 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.sub-menu a:hover::before, .sub-menu a:focus::before{
+  content: '\e801';
+  /*  둘다 동시에 적용이 되는데, 하나만 적용되게 하려면 js 로 제어해야 한다. */
+}
 
 /* 비주얼 */
 .visual{
