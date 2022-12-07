@@ -43,6 +43,7 @@ body{
   padding: 0 30px;
   border-radius: 0 0 15px 15px;
   position: relative;
+  height: auto;
 }
 /* 로고 */
 .logo{
@@ -83,7 +84,7 @@ body{
 
 /* 메인 메뉴 */
 .navigation{
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 .menu{
   border-top: 2px solid currentColor;
@@ -135,10 +136,10 @@ body{
 }
 
 .sub-menu{
-  background-color: pink;
   position: absolute;
   /* left: 0; */
   top: 47; /* 부모의 높이는 45px, 박스 아래 구분선의 두께 2px = 47px */
+  /* padding: 4px 0; */
   display: none;
 }
 
@@ -157,8 +158,7 @@ body{
 아래의 것들은 필요없다. */
 .sub-menu li{
   display: inline-block;
-  padding-left: 1em;
-  background: yellow;
+  /* padding-left: 1em; */
 }
 .sub-menu a::before{
   content: '\e802';
@@ -181,7 +181,14 @@ body{
   content: '\e801';
   /*  둘다 동시에 적용이 되는데, 하나만 적용되게 하려면 js 로 제어해야 한다. */
 }
-
+.sub-menu a{
+  display: inline-block;
+  padding: 10px 0;
+}
+/* 마우스를 올렸을 때만 바뀌게 */
+.sub-menu a:hover, .sub-menu a:focus{
+  color: #f00;
+}
 /* 비주얼 */
 .visual{
   background: orange;
