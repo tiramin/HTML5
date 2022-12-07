@@ -190,9 +190,33 @@ body{
   color: #f00;
 }
 /* 비주얼 */
+/* 키프레임 선언 */
+/* @ = at sign rule 은 정의하거나 선언하는 것  */
+@keyframes moveEffect{
+  0%{
+    font-size: 12px; 
+    color: rgba(0,0,0,0.2);
+    transform: translate(0,0);
+  }
+  100%{
+    font-size: 24px; 
+    color: rgba(0,0,0,1);
+    transform: translate(400px, 75px);
+  }
+}
+
 .visual{
   background: orange;
-  height: 10vh;
+  height: 120px;
+}
+/* 선언만 해줘선 안된다. 키프레임 어디다 적용할건지? */
+.visual-text{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: coral;
+  animation-name: moveEffect;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards; /* 글자가 커진 상태로 멈춘다. 애니메이션이끝난 상태로 유지된다.반대로 backwards 는 애니메이션이 시작한 시점 상태로 멈춘다. 따라서 기본값임.*/  
+  display: inline-block;
 }
 
 /* 메인 */
