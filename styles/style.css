@@ -2,7 +2,7 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 /* 숨김 콘텐츠 */
-.a11y-hidden{
+.a11y-hidden, legend{
   background-color: red;
   position: absolute;
   width: 1px;
@@ -262,10 +262,11 @@ body{
 
 /* 메인 */
 .main{
-  background: lightgreen;
-  height: 50vh;
+  background: #fff;
+  min-height: 450px;
   display: flow-root;
-  padding: 0 15px;
+  padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
   /* border: 1px solid red; */
   /* overflow: hidden; */
   /* BFC */
@@ -285,7 +286,6 @@ body{
   display: block;
 } */
 .group1{
-  background-color: violet;
   width: 250px;
   /* float: left; */
 }
@@ -309,6 +309,113 @@ body{
   content: "마지막 자식 요소 입니다.";
   background: blue;
   color: white;
+} */
+
+/* 로그인 */
+.login{
+  /* 혹시라도 그라디언트를 제공하지 못하더라도 다른 형태로라도 보이게 callback(대안) 디자인을 만드는 것
+  -> 항상 이런 식으로 대안을 만들어 놓는 것이 프론트엔드 개발자이다! */
+  background: orange radial-gradient(circle at right top, orange, orangered);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 5px 0 0 #bbb;
+}
+.login h2{
+  color: yellow;
+  font-weight: 700; /* reset 으로 인해 초기화되었다.*/
+  font-size: 18px;
+  text-indent: 10px;
+}
+.login-form{
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px 8px 0 0;
+  margin-top: 10px;
+}
+/* 선생님답 */
+.user-email, .user-pw{
+  margin-bottom: 5px;
+}
+.login-form label{
+  display: inline-block;
+  width: 4em;
+}
+.login-form input{
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 1px 1px 1px 5px;
+}
+.login-form fieldset{
+  position: relative;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #aaa;
+}
+.login-button{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 53px;
+  height: 53px;
+  border: 0;
+  background: #e85e2c;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.sign{
+  background: #fff;
+  border-radius: 0 0 8px 8px;
+  padding: 0 10px 4px 10px;
+  font-size: 12px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.sign a{
+  display: block;
+  padding: 6px 0;
+  word-spacing: 0; /* 자간 */
+}
+
+.sign li a::before{
+  content: '\e803';
+  font-family: 'fontello';
+  color: #e85e2c;
+  margin-right: 3px;
+}
+
+/* 유효성 검사 배너 */
+.validation-list{
+  margin-top: 15px;
+  padding: 1px;
+}
+.validation-list li{
+  margin-top: 10px; /* a에 지정해주지 않는 이유 */
+}
+.validation-list li a{
+  display: block;
+  padding: 8px 15px 8px 55px;
+  background: url(./images/validation_icon.png) no-repeat 25px 50%, #ccc linear-gradient(to bottom, #ccc,#eee);
+  border: 1px solid #aaa;
+  border-radius: 30px;
+}
+/* hover 옵션줄때 focus 옵션도 같이 주는 것이 좋다. */
+.validation-list li a:hover, .validation-list li a:focus{
+  color: red;
+}
+/* 가상요소는 inline 요소 */
+/* .validation-list li a::before{
+  content: "";
+  width: 16px;
+  height: 17px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  
 } */
 
 /* 슬로건 */
