@@ -522,6 +522,66 @@ body{
   font-size: 1.2rem;
 }
 
+/* 공지사항 및 자료실 */
+.board, .board-list{
+  margin-top: 20px;
+  position: relative;
+}
+.tablist{
+  display: flex;
+  flex-flow: row nowrap;
+}
+.tab{
+  border: 1px solid #aaa;
+  background: #ccc;
+  border-radius: 5px 5px 0 0;
+  padding: 7px 15px;
+  color: #666;
+}
+.tab.is-select{
+  background: #fff;
+  color: #e85e2c;
+  /* border: 1px solid #e85e2c;
+  border-bottom: 0; */
+  border-color: currentColor currentColor #fff currentColor;
+}
+
+.tab-panel{
+  display: none;
+  margin-top: 15px;
+}
+.is-select.tab-panel{
+  display: block;
+}
+
+.board-list li{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.board-list li a{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; /* 말줄임표. 혼자안쓰이고 세트로 쓰임 */
+  flex-shrink: 1; /* 너비를 지정해주는 대신 shrink 로 축소시킴 */
+}
+.board-list time{
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+.board-more{
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px; /* 필수는 아님. 키보드 클릭영역을 넓히기 위해*/
+}
+.icon-plus::before{
+  color: hsla(110, 50%, 30%, 1);
+  /* 색의 농도를 결정하기 좋다. */
+}
+
 /* 슬로건 */
 .slogan{
   background: skyblue;
