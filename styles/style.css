@@ -1,4 +1,5 @@
 @import url(./fonts.css);
+@import url(./fontello.css);
 @import url(./normalize.css);
 @import url(./reset.css);
 /* 숨김 콘텐츠 */
@@ -290,7 +291,6 @@ body{
   /* float: left; */
 }
 .group2{
-  background-color: salmon;
   width: 380px;
   /* float: left; */
 }
@@ -468,6 +468,58 @@ body{
 }
 .even .term-list-thumbnail{
   float: right;
+}
+
+/* 검색 폼  */
+.search-form{
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border-radius: 15px 15px 0 0;
+  border: 1px solid #aaa;
+  padding: 15px 25px 10px 25px;
+}
+.search-form-inner{
+  display: flex;
+  flex-flow: row nowrap;
+  /* justify-content: space-between; */
+}
+.form-group{ /*flex*/
+  /* background: pink; */
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-right: 10px;
+}
+.form-group-label{ /* flex-item */
+  /* white-space: nowrap; */
+  /* 강제로 줄바꿈 문제 해결 */
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+.form-group-input{
+  border: 1px solid #aaa;  
+  border-radius: 3px;
+  height: 24px;
+  padding: 1px 1px 1px 5px;
+  flex-grow: 1;
+  /* 파이어폭스에서 넘치는 현상 해결하는 방법
+  -> 지금은 해결이 안 됨 */
+  /* min-width: 0; */
+  /* max-width: 100%; */
+  width: 100%;
+  /* ->해결 완료 */
+}
+.search-button{
+  flex-shrink: 0;
+  /* white-space:nowrap;  */
+  /* 강제로 줄바꿈 문제 해결 */
+  background: #212121;
+  color: #fff;
+  height: 24px;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 1.2rem;
 }
 
 /* 슬로건 */

@@ -207,10 +207,74 @@
               <label for="search" class="form-group-label"><span class="icon-search" aria-hidden="true"></span>자료검색</label>
               <input type="search" id="search" class="form-group-input" required placeholder="검색어를 입력하세요. 예)HTML5" />
             </div>
-            <button type="submit" class="button-fill button">검색</button>
+            <button type="submit" class="search-button button">검색</button>
           </div>
         </fieldset>
       </form>
+
+      <div class="board">
+        <ul class="tablist" role="tablist">
+          <li role="none"><button type="button" class="tab" role="tab" aria-controls="notice" id="noticeButton" aria-selected="true">공지사항</button></li>
+          <li role="none"><button type="button" class="tab" role="tab" aria-controls="archive" id="archiveButton" aria-selected="false">자료실</button></li>
+        </ul>
+      </div>
+
+      <div class="notice tab-panel" role="tabpanel" id="notice" aria-labelledby="noticeButton">
+        <h2 class="a11y-hidden">공지사항</h2>
+        <ul class="board">
+          <li>
+            <a class="icon-dot-circled" href="/">HTML의 모든 것을 알려주마 샘플 활용법</a>
+            <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+          </li>
+          <li>
+            <a class="icon-dot-circled" href="/">W3C 사이트 리뉴얼 및 공지사항</a>
+            <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+          </li>
+          <li>
+            <a class="icon-dot-circled" href="/">KWCAG 2.1 소식</a>
+            <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+          </li>
+          <li>
+            <a class="icon-dot-circled" href="/">서버 점검으로 인한 사이트 이용안내 입니다.</a>
+            <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+          </li>
+          <li>
+            <a class="icon-dot-circled" href="/">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.</a>
+            <time datetime="2022-12-12T13:53:45">2022.12.12</time>
+          </li>
+        </ul>
+        <!-- 더보기->공지사항 더보기 링크 -->
+        <a href="/" class="board-more icon-plus" aria-labelledby="noticeButton">더보기</a>        
+      </div>
+      
+      <div class="archive tab-panel" role="tabpanel" id="archive" aria-labelledby="archiveButton">
+        <h2 class="a11y-hidden">자료실</h2>
+        <ul class="board">
+          <li>
+            <a class="icon-dot-circled" href="/">디자인 사이트 링크 모음</a>
+            <time datetime="2022-12-21T13:53:45">2022.12.21</time>
+          </li>
+          <li>
+            <a class="icon-dot-circled" href="/">웹 접근성 관련 자료 모음</a>
+            <time datetime="2022-12-21T13:53:45">2022.12.21</time>
+          </li>
+          <li>
+            <a class="icon-dot-circled" href="/">예제 샘플 응용해보기</a>
+            <time datetime="2022-12-21T13:53:45">2022.12.21</time>
+          </li>
+          <li>
+            <a class="icon-dot-circled" href="/">웹 접근성 향상을위한 국가 표준 기술 가이드라인</a>
+            <time datetime="2022-12-21T13:53:45">2022.12.21</time>
+          </li>
+          <li>
+            <a class="icon-dot-circled" href="/">로얄티 프리 이미지 자료</a>
+            <time datetime="2022-12-21T13:53:45">2022.12.21</time>
+          </li>
+        </ul>
+        <!-- 더보기->자료실 더보기 -->
+        <a href="/" class="board-more icon-plus" aria-labelledby="archiveButton">더보기</a>
+      </div>
+
     </div>
     <div class="group group3">
       그룹3
