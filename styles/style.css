@@ -390,7 +390,7 @@ body{
 
 /* 유효성 검사 배너 */
 .validation-list{
-  margin-top: 15px;
+  margin-top: 25px;
   padding: 1px;
 }
 .validation-list li{
@@ -417,6 +417,58 @@ body{
   margin-right: 5px;
   
 } */
+
+/* 웹 관련 용어 */
+.term{
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+}
+.term-title{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.term-list{
+  margin-top: 10px;
+}
+.term-list div{ /*요소선택자방식 */
+  margin-top: 10px;
+  /* 두번째 div 은 마진병합이 일어남 */
+  display: flow-root;
+}
+.term-list-subject, .term-list-brief{
+  float: right;
+  width: 145px;
+}
+.term-list-subject{
+  color: #296897;
+  font-weight: 500;
+}
+.term-list-thumbnail{
+  float: left;
+}
+.term-list-thumbnail img{
+  /* display: block; */
+  /* inline 박스가 가지고 있는 디센더
+  이미지가 여러개 생기면 밑으로 떠러질 것
+  그래서 이를 대신하는 것이 vertical align 이다. */
+  vertical-align: middle;
+  /* vertical 없어도 부모요소에 flex 를 주면 갭이 사라진다. 초기화시킬 때 모든 이미지를 vertical align 을 쓰긴한다. middle 말고 top을 쓰기도한다.
+  어떤 업체는 top 을 쓴다. */
+}
+.term-list-brief{
+  margin-top: 5px;
+  line-height: 1.5;
+  /* 1.6이 가장 가독성 높음 */
+}
+.even .term-list-subject, .even .term-list-brief{
+  float: left;
+}
+.even .term-list-thumbnail{
+  float: right;
+}
 
 /* 슬로건 */
 .slogan{
