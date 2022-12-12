@@ -550,7 +550,7 @@ body{
   display: none;
   margin-top: 15px;
 }
-.is-select.tab-panel{
+.tab-panel.is-select{
   display: block;
 }
 
