@@ -1,0 +1,15 @@
+{
+
+  "editor.tokenColorCustomizations": {
+    "comments": #EFDC05;
+  },
+
+  "json.schemas": [
+  {
+    "fileMatch": [
+      "/myfile"
+    ],
+    "url": "schemaURL"
+  }
+  ]
+}
